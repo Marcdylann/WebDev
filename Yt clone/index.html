@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Your CSS styles here */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .youtube-icon {
+            width: 100%;
+            text-align: center;
+        }
+
+        .video-container {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .video-name {
+            font-size: 16px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="youtube-icon">
+            <img src="download.png" alt="YouTube Icon">
+        </div>
+
+        <div class="video-container" onclick="playVideo('lol.mp4')">
+            <video class="video" src="lol.mp4" poster="mincraft.png" controls muted></video>
+            <h2 class="video-name">Minecraft Adventures!</h2>
+        </div>
+
+        <div class="video-container" onclick="playVideo('funnycats.mp4')">
+            <video class="video" src="funnycats.mp4" poster="funnycats.png" controls muted></video>
+            <h2 class="video-name">Funny cat videos</h2>
+        </div>
+
+        <div class="video-container" onclick="playVideo('hindershortfilm.mp4')">
+            <video class="video" src="hindershortfilm.mp4" poster="hidden.png" controls muted></video>
+            <h2 class="video-name">Hidden Short Film</h2>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
